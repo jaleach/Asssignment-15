@@ -20,7 +20,7 @@ $('#addTask').on('submit', function(event){
  var taskText = $('#taskText').val();
  var taskInstance = new Todo({task: taskText});
  storageBin.push(taskInstance);
- $('#tasks').append('<li><input type=radio>'+taskText+'<span class="fa fa-trash-o"></span></li>');
+ $('#tasks').append('<li><label><input type=radio>'+taskText+'</label><span class="fa fa-trash-o"></span></li>');
 
 
  this.reset();
@@ -28,41 +28,46 @@ $('#addTask').on('submit', function(event){
 
 // toggle item
 
-// $('#tasks').on('click', 'li', function(){
-//  event.preventDefault();
+$('#tasks').on('click', 'label', function(event){
+ event.preventDefault();
 
-//  //grab the list item I clicked on
-//  //mark that item as completed
-//  $(this).addClass('complete');
-//  var tTask= $(this).text();
-//  var taskToEdit = _.find(storageBin, { task: tTask });
-//  taskToEdit.status = 'Closed';
+ //grab the list item I clicked on
+ //mark that item as completed
+ $(this).addClass('complete');
+ var tTask= $(this).text();
+ var taskToEdit = _.find(storageBin, { task: tTask });
+ taskToEdit.status = 'Closed';
 
-//  $('#done').append('<li>' + tTask + '<span class="fa fa-trash-o"></span></li>');
+ $('#done').append('<li><label><input type=radio checked="checked">' + tTask + '</label><span class="fa fa-trash-o"></span></li>');
 
-//  $(this).remove();
-
-
-// });
-
-// $('#done').on('click', 'li', function(){
-//  event.preventDefault();
+ $(this).closest('li').remove();
 
 
-//  $(this).addClass('complete');
-//  var tTask= $(this).text();
-//  var taskToEdit = _.find(storageBin, { task: tTask });
-//  taskToEdit.status = 'Open';
+});
 
-//  $('#tasks').append('<li>' + tTask + '<span class="fa fa-trash-o"></span></li>');
+$('#done').on('click', 'label', function(event){
+ event.preventDefault();
 
-//  $(this).remove();
 
-// });
-//
-// $('ul').on("click", span, function(){
-//    $(this).remove();
-// });
+ $(this).addClass('complete');
+ var tTask= $(this).text();
+ var taskToEdit = _.find(storageBin, { task: tTask });
+ taskToEdit.status = 'Open';
+
+ $('#tasks').append('<li><label><input type=radio>' + tTask + '</label><span class="fa fa-trash-o"></span></li>');
+
+ $(this).closest('li').remove();
+
+});
+
+$('ul').on("click", 'span', function(event){
+  event.preventDefault();
+  var tTask= $(this).closest('li').text();
+  var taskToEdit = _.find(storageBin, { task: tTask });
+  storageBin=_.without(storageBin, taskToEdit);
+  $(this).closest('li').remove();
+
+});
 
 
 // }());

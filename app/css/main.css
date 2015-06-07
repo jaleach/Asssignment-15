@@ -17,6 +17,10 @@ h1 {
 .tasks {
   color: black; }
 
+.tasks1 input {
+  margin-left: 22px;
+  width: 26px; }
+
 input {
   margin-left: 50px;
   height: 20px;
