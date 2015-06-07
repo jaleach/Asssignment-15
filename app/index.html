@@ -4,20 +4,34 @@
   <title>To do List</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
   <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
+<header>
+  <h1>The TO DO list 2015</h1>
 
+</header>
   <div class="container">
+  <div class="taskentry">
 
     <form id="addTask">
     <input type="text" id="taskText">
-    <button>Add Item</button>
+    <button>Create ToDo</button>
+    <div class="break"></div>
     </form>
+      <ul id="tasks" class="tasks1">
+      </ul>
 
-     <ul id="tasks" class="tasks"></ul>
 
 
+     <div class="taskbox">
+     <form id="removetask"> </form>
+     <ul id="done" class="doneit"></ul>
+
+        </div>
+     </div>
   </div>
 
   <!-- VENDOR -->

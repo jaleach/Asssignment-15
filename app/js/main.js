@@ -20,23 +20,50 @@ $('#addTask').on('submit', function(event){
  var taskText = $('#taskText').val();
  var taskInstance = new Todo({task: taskText});
  storageBin.push(taskInstance);
- $('#tasks').append('<li>' + taskText + '</li>');
+ $('#tasks').append('<li><input type=radio>'+taskText+'<span class="fa fa-trash-o"></span></li>');
+
+
  this.reset();
 });
 
 // toggle item
 
-$('#tasks').on('click', 'li', function(){
- event.preventDefault();
+// $('#tasks').on('click', 'li', function(){
+//  event.preventDefault();
 
- //grab the list item I clicked on
- //mark that item as completed
- $(this).addClass('complete');
- var tTask= $(this).text();
- var taskToEdit = _.find(storageBin, { task: tTask });
- taskToEdit.status = 'Closed';
- console.log(taskToEdit);
-});
+//  //grab the list item I clicked on
+//  //mark that item as completed
+//  $(this).addClass('complete');
+//  var tTask= $(this).text();
+//  var taskToEdit = _.find(storageBin, { task: tTask });
+//  taskToEdit.status = 'Closed';
+
+//  $('#done').append('<li>' + tTask + '<span class="fa fa-trash-o"></span></li>');
+
+//  $(this).remove();
+
+
+// });
+
+// $('#done').on('click', 'li', function(){
+//  event.preventDefault();
+
+
+//  $(this).addClass('complete');
+//  var tTask= $(this).text();
+//  var taskToEdit = _.find(storageBin, { task: tTask });
+//  taskToEdit.status = 'Open';
+
+//  $('#tasks').append('<li>' + tTask + '<span class="fa fa-trash-o"></span></li>');
+
+//  $(this).remove();
+
+// });
+//
+// $('ul').on("click", span, function(){
+//    $(this).remove();
+// });
+
 
 // }());
 

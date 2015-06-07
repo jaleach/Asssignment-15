@@ -1,8 +1,33 @@
-.container {
-  background-color: red; }
+h1 {
+  text-align: center;
+  color: beige; }
+
+.taskentry {
+  width: 500px;
+  height: 500px;
+  margin-left: 50px;
+  background-color: #4DA4D4;
+  padding: 5px;
+  border-radius: 20px;
+  color: black; }
+  .taskentry button {
+    border-radius: 20px;
+    color: black; }
 
 .tasks {
-  color: blue; }
+  color: black; }
 
-.input {
-  margin-left: 25px; }
+input {
+  margin-left: 50px;
+  height: 20px;
+  width: 203px;
+  margin-top: 25px;
+  padding: 4px;
+  border-radius: 20px;
+  color: black; }
+
+.taskbox {
+  float: right; }
+
+.complete {
+  text-decoration: line-through; }
