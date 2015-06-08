@@ -1,46 +1,122 @@
 
-
+header{
+  background-color: #4F070D;
+  height: 80px;
+  padding-top: 9px;
+  padding-bottom: 30px;
+}
 h1{
   text-align: center;
   color: beige;
-
+  font-family: 'Lobster', cursive;
+  font-size: 44px;
 }
 .taskentry{
-  width: 500px;
-  height: 500px;
+  position: relative;
+  width: 561px;
+  height: 467px;
   margin-left: 50px;
-  background-color:#4DA4D4;
+  background-color: #53504D;
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 38px;
   color: black;
+  padding-top: 30px;
+
   button{
-  border-radius: 20px;
-  color: black;
+  border-radius: 38px;
+  color: rgb(84, 37, 37);
+  height: 29px;
+  font-family: monospace;
+  font-size: 12px;
   }
+  h4{
+  margin-left: 53px;
+  padding-top: 22px;
+  font-family: monospace;
+  color:  moccasin;
+  }
+}
+.container{
+  background-color: #4F070D;
+  padding-top: 32px;
+  position: absolute;
+  display: flex;
 }
 .tasks{
   color: black;
 }
 .tasks1{
+  color: moccasin;
+  margin-left: 53px;
   input{
-  margin-left: 22px;
+  width: 26px;
+  margin-top: -2px;
+  margin: 5px;
+  margin-left: 25px;
+  }
+}
+.doneit{
+  input{
+    margin-left: 74px;
   width: 26px;
 
   }
 }
+label{
+  list-style-type: none;
+}
+ul{
+  list-style: none;
+  font-family: 'Ubuntu', sans-serif;
+  color:  moccasin;
+}
+.fa{
+  font-size: 13px;
+  padding-left: 20px;
+}
 
 input{
   margin-left: 50px;
-  height: 20px;
-  width: 203px;
+  height: 17px;
+  width: 262px;
   margin-top: 25px;
   padding: 4px;
-  border-radius: 20px;
-  color: black;
+  border-radius: 38px;
+  color: grey;
+  font-family: monospace;
 }
 .taskbox{
-  float:  right;
+  width: 561px;
+  height: 500px;
+  margin-top: 1px;
+  border-radius: 38px;
+  background-color: #605C13;
+  margin-right: 81px;
+  margin-left: 10px;
+  h4{
+  text-align: center;
+  font-size: 29px;
+  color: moccasin;
+  font-family: monospace;
+  margin-top: 47px;
+  }
+}
+.clicker{
+  margin-left: 53px;
+  font-family: monospace;
+  color: moccasin;
+  margin-bottom: -17px;
 }
 .complete{
   text-decoration: line-through
+}
+h2{
+
+  font-family: monospace;
+  color: moccasin;
+  text-align: center;
+  padding-top: 17px;
+}
+.thanks{
+  padding-top: 4px;
 }

@@ -20,7 +20,7 @@ $('#addTask').on('submit', function(event){
  var taskText = $('#taskText').val();
  var taskInstance = new Todo({task: taskText});
  storageBin.push(taskInstance);
- $('#tasks').append('<li><label><input type=radio>'+taskText+'</label><span class="fa fa-trash-o"></span></li>');
+ $('#tasks').append('<li><label><input type=radio>'+taskText+'</label><span class="fa fa-trash-o">to delete</span></li>');
 
 
  this.reset();
@@ -38,7 +38,7 @@ $('#tasks').on('click', 'label', function(event){
  var taskToEdit = _.find(storageBin, { task: tTask });
  taskToEdit.status = 'Closed';
 
- $('#done').append('<li><label><input type=radio checked="checked">' + tTask + '</label><span class="fa fa-trash-o"></span></li>');
+ $('#done').append('<li><label><input type=radio checked="checked">' + tTask + '</label><span class="fa fa-trash-o">to delete</span></li>');
 
  $(this).closest('li').remove();
 
@@ -54,7 +54,7 @@ $('#done').on('click', 'label', function(event){
  var taskToEdit = _.find(storageBin, { task: tTask });
  taskToEdit.status = 'Open';
 
- $('#tasks').append('<li><label><input type=radio>' + tTask + '</label><span class="fa fa-trash-o"></span></li>');
+ $('#tasks').append('<li><label><input type=radio>' + tTask + '</label><span class="fa fa-trash-o">to delete</span></li>');
 
  $(this).closest('li').remove();
 
