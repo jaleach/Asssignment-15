@@ -10,6 +10,10 @@
 };
 var storageBin = [];
 
+
+//Prototype homework assignment
+//unable to run
+
 $.fn.bluey = function(){
   $this.css('color', 'blue');
   return this;
@@ -76,6 +80,8 @@ $('ul').on("click", 'span', function(event){
 
 });
 
+
+//Prototype homework
 $('clicker.button').on("click", 'h2.bluey', function(){
 });
 
