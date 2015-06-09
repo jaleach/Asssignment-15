@@ -10,6 +10,13 @@
 };
 var storageBin = [];
 
+$.fn.bluey = function(){
+  $this.css('color', 'blue');
+  return this;
+};
+
+Todo.prototype.Todo=true;
+
 // var a = new Todo({task: taskText});
 
 //Set up submit
@@ -69,6 +76,7 @@ $('ul').on("click", 'span', function(event){
 
 });
 
+$('clicker.button').on("click", 'h2.bluey', function(){
+});
 
 // }());
-
