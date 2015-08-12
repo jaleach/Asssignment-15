@@ -1,6 +1,6 @@
-## Welcome to My Repo
+## To Do List project
 
-> I am your Readme.md file, you should probably update me.
+> Built with jQuery and Handlebars
 
 
 ## Usage
